@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  Canvas.swift
 //  FingerDraw
 //
 //  Created by Tiago Oliveira on 01/05/21.
@@ -8,6 +8,18 @@
 import UIKit
 
 class Canvas: UIView {
+    
+    var lines = [[CGPoint]]()
+    
+    func undo() {
+        _ = lines.popLast()
+        setNeedsDisplay()
+    }
+    
+    func clear() {
+        lines.removeAll()
+        setNeedsDisplay()
+    }
     
     // custom drawing
     override func draw(_ rect: CGRect) {
@@ -32,9 +44,6 @@ class Canvas: UIView {
         context.strokePath()
     }
     
-    var line = [CGPoint]()
-    var lines = [[CGPoint]]()
-    
     // new line
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         lines.append([CGPoint]())
@@ -51,19 +60,3 @@ class Canvas: UIView {
         setNeedsDisplay()
     }
 }
-
-class ViewController: UIViewController {
-    
-    let canvas = Canvas()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.addSubview(canvas)
-        canvas.backgroundColor = .white
-        canvas.frame = view.frame
-    }
-
-
-}
-

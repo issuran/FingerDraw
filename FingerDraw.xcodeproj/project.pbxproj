@@ -15,6 +15,7 @@
 		523203C7263D81E600A42033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523203C5263D81E600A42033 /* LaunchScreen.storyboard */; };
 		523203D2263D81E600A42033 /* FingerDrawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523203D1263D81E600A42033 /* FingerDrawTests.swift */; };
 		523203DD263D81E600A42033 /* FingerDrawUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523203DC263D81E600A42033 /* FingerDrawUITests.swift */; };
+		523203EF263DA4C400A42033 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523203EE263DA4C400A42033 /* Canvas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		523203D8263D81E600A42033 /* FingerDrawUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FingerDrawUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		523203DC263D81E600A42033 /* FingerDrawUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerDrawUITests.swift; sourceTree = "<group>"; };
 		523203DE263D81E600A42033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		523203EE263DA4C400A42033 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +101,12 @@
 		523203B9263D81E400A42033 /* FingerDraw */ = {
 			isa = PBXGroup;
 			children = (
+				523203F6263DA50400A42033 /* Controllers */,
+				523203ED263DA49C00A42033 /* Views */,
 				523203BA263D81E400A42033 /* AppDelegate.swift */,
 				523203BC263D81E400A42033 /* SceneDelegate.swift */,
-				523203BE263D81E400A42033 /* ViewController.swift */,
-				523203C0263D81E400A42033 /* Main.storyboard */,
 				523203C3263D81E600A42033 /* Assets.xcassets */,
+				523203C0263D81E400A42033 /* Main.storyboard */,
 				523203C5263D81E600A42033 /* LaunchScreen.storyboard */,
 				523203C8263D81E600A42033 /* Info.plist */,
 			);
@@ -126,6 +129,22 @@
 				523203DE263D81E600A42033 /* Info.plist */,
 			);
 			path = FingerDrawUITests;
+			sourceTree = "<group>";
+		};
+		523203ED263DA49C00A42033 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				523203EE263DA4C400A42033 /* Canvas.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		523203F6263DA50400A42033 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				523203BE263D81E400A42033 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +280,7 @@
 				523203BF263D81E400A42033 /* ViewController.swift in Sources */,
 				523203BB263D81E400A42033 /* AppDelegate.swift in Sources */,
 				523203BD263D81E400A42033 /* SceneDelegate.swift in Sources */,
+				523203EF263DA4C400A42033 /* Canvas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
